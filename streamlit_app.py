@@ -279,7 +279,7 @@ def main():
                             
                             # Build URL
                             if nse and nse.lower() != "nan" and nse != "":
-                                url = f"https://www.screener.in/company/{nse}/consolidated/"
+                                url = f"https://www.screener.in/company/{nse}/"
                             elif bse and bse.lower() != "nan" and bse != "":
                                 url = f"https://www.screener.in/company/{bse}/"
                             else:
@@ -306,7 +306,7 @@ def main():
     with st.form("add_to_queue_form", clear_on_submit=True):
         col1, col2 = st.columns([4, 1])
         with col1:
-            new_url = st.text_input("Add Screener.in URL to queue", placeholder="https://www.screener.in/company/TCS/consolidated/")
+            new_url = st.text_input("Add Screener.in URL to queue", placeholder="https://www.screener.in/company/TCS/")
         with col2:
             st.write(" ") # Padding
             add_btn = st.form_submit_button("➕ Add to List")
